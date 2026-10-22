@@ -148,5 +148,63 @@ var sumDouble = function(a, b){
 }
 
 
+// 10. diff21
+// Return the absolute difference between n and 21, doubling it when n is greater than 21.
+/**
+  * @param {number} n
+  * @return {number}
+  */
+
+var diff21 = function(n){
+     if(n > 21){ 
+       return (n-21) * 2;
+     }
+
+     else{
+        return 21-n;
+     }
+}
+
+// 11. parrotTrouble
+// Return true when a talking parrot is causing trouble outside the allowed hours of 7 through 20.
+/**
+  * @param {boolean} talking
+  * @param {number} hour
+  * @return {boolean}
+  */
+
+
+var parrotTrouble = function(talking, hour){
+     if(talking && (hour < 7 || hour > 20)){
+        return true
+     }
+   else{
+   return false;
+  }
+  }
+
+  
+
+//   12. makes10
+// Return true if either number is 10 or their sum is 10.
+/**
+  * @param {number} a
+  * @param {number} b
+  * @return {boolean}
+  */
+
+
+var makes10 = function(a , b){
+    if((a === 10) || (b === 10) || (a + b === 10)){
+        return true;
+    }
+    else{
+      return false;
+    }
+}
+
+
+
+
 
 
