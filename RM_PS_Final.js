@@ -76,5 +76,60 @@ var opposite = function(number){
    }
 }
 
-var value = opposite(-7)
-console.log(value)
+// 06. Simple Array Sum
+// Return the sum of all integers in an array.
+/**
+* @param {number[]} ar
+* @return {number}
+*/
+
+var simpleArraySum  = function (ar){
+    let sum = 0;
+     for(let i = 0; i <ar.length; i ++){
+      sum = sum + ar [i]
+     }
+     return sum;
+}
+
+// 07. sleepIn
+// Return true if it is not a weekday or you are on vacation.
+/**
+* @param {boolean} weekday
+* @param {boolean} vacation
+* @return {boolean}
+*/
+
+var sleepIn = function(weekday, vacation){
+    if(!weekday || vacation) {
+       return true;
+    } else{
+         return false;
+    }
+   
+}
+
+
+// 08. monkeyTrouble
+// Two monkeys are in trouble if both are smiling or neither is smiling. Return true in that case.
+/**
+* @param {boolean} aSmile
+* @param {boolean} bSmile
+* @return {boolean}
+*/
+
+
+var monkeyTrouble = function(aSmile, bSmile){
+     if(aSmile && bSmile){
+        return true
+     }
+     else if(!aSmile && !bSmile){
+        return true
+     }
+     else{
+       return false;
+     }
+}
+
+
+
+
