@@ -365,23 +365,21 @@ var gradingStudents = function(grades) {
 */
 
 
-
 var timeConversion = function(s) {
-    let time = s.slice(0, 8);
-    let hour = parseInt(s.slice(0, 2));
+    let hour = parseInt(s.slice(0, 2), 10);
+    let time = s.slice(2, 8);
 
     if (s.endsWith("AM")) {
         if (hour === 12) {
-            time = "00" + s.slice(2, 8);
+            hour = 0;
         }
     } else {
         if (hour !== 12) {
             hour += 12;
-            time = hour + s.slice(2, 8);
         }
     }
 
-    return time;
+    return String(hour).padStart(2, "0") + time;
 };
 
 
